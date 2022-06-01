@@ -1,0 +1,53 @@
+#top{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color:aliceblue;
+    font-size: 30px;
+}
+
+#gap{
+    height: 200px;
+
+}
+
+.icon{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#top-down{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color:aliceblue;
+    font-size: 30px;
+}
+
+#middle{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color:aliceblue;
+    font-size: 30px;
+
+}
+
+#middle-down{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color:aliceblue;
+    font-size: 30px;
+
+}
+#footer{
+  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }

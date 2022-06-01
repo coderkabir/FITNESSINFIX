@@ -1,0 +1,58 @@
+#top{
+  background-color: black;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  color:aliceblue;
+  font-size: 30px;
+}
+
+#gap{
+  height: 20%;
+}
+
+#middle{
+  background-color: black;
+  color:aliceblue;
+
+}
+
+#title-image{
+  width: 35rem;[;p]
+  height: 20rem;
+  padding-left: 190px;
+}
+
+#paragraph{
+  font-size: 15px;
+  padding-left: 100px;
+  padding-top: 15%;
+}
+.butn{
+  padding-top: 30px;
+}
+
+#gap{
+  height: 200;
+}
+
+#footer{
+  
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#mybtn{
+  border-radius: 10px;
+  border-width: 1px;
+  background-color: whitesmoke;
+  margin-left: 35%;
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(12, 12, 177);
+  cursor: pointer;
+  color: white;
+  transition: 10ms;
+}

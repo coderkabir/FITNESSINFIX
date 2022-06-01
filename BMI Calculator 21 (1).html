@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="myscripts.js"></script>
+    <script src="myscriptsa.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!--Stylesheet-->
+    <style media="screen">
+    	*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url('images (2).jpg');
+}
+.container{
+    background-color: #ffffff;
+    padding: 30px 30px;
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+}
+.container h1{
+	background: #000000;
+	color: white;
+	text-align: center;
+	font-size: 23px;
+	letter-spacing: 1px;
+	margin-top: -30px;
+	margin-left: -30px;
+	margin-right: -30px;
+	margin-bottom: 40px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.allbuttons{
+  padding-top: 39%;
+  padding-left: 23%;
+}
+.row span{
+    font-weight: 500;
+}
+input[type="range"]{
+    width: 70%;
+    height: 3.5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #dcdcdc;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#result{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #0be881;
+}
+#category{
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.display{
+box-shadow: 0 0 20px rgba(0,139,253,0.25);
+margin-bottom: 60px;
+}
+    </style>
+</head>
+<body>
+  <div class="row">
+    <div class="container">
+			<h1>BMI Calculator</h1>
+			<div class="display">
+				        <p id="result">20.0</p>
+				        <p id="category">Normal weight</p>
+			</div>
+        <div class="row">
+            <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()">
+            <span id="weight-val">20 kg</span>
+        </div>
+        <div class="row">
+            <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()">
+            <span id="height-val">100 cm</span>
+        </div>
+
+
+    </div>
+    <div class="allbuttons">
+      <a href=""></a><button type="button" class="btn btn-outline-light btn-lg download-btn"><i class="fab fa-apple"></i>Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-btn"><i class="fab fa-google-play"></i>Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-btn"><i class="fas fa-book"></i>WORKOUT GUIDE</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-btn"><i class="fa-solid fa-box-archive"></i>SUPPLEMENTS</button>
+
+
+    </div>
+
+
+  </div>
+    <!--Script-->
+    <script type="text/javascript">
+function calculate(){
+    var bmi;
+    var result = document.getElementById("result");
+
+    var weight = parseInt(document.getElementById("weight").value);
+    document.getElementById("weight-val").textContent = weight + " kg";
+
+    var height = parseInt(document.getElementById("height").value);
+    document.getElementById("height-val").textContent = height + " cm";
+
+    bmi = (weight / Math.pow( (height/100), 2 )).toFixed(1);
+    result.textContent = bmi;
+
+    if(bmi < 18.5){
+        category = "Underweight 😒";
+        result.style.color = "#ffc44d";
+    }
+    else if( bmi >= 18.5 && bmi <= 24.9 ){
+        category = "Normal Weight 🥰";
+        result.style.color = "#0be881";
+    }
+    else if( bmi >= 25 && bmi <= 29.9 ){
+        category = "Overweight 😦";
+        result.style.color = "#ff884d";
+    }
+    else{
+        category = "Obese 😰";
+        result.style.color = "#ff5e57";
+    }
+    document.getElementById("category").textContent = category;
+}
+    </script>
+</body>
+</html>

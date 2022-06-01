@@ -1,0 +1,125 @@
+body{
+  padding-bottom: 0px;
+}
+h1{
+  padding-left: 100px;
+}
+h1{
+  color: greenyellow;
+}
+
+#heading{
+  background-color: black;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  color:aliceblue;
+  font-size: 30px;
+
+}
+
+#gap{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#middle{
+  background-color: black;
+  color:aliceblue;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 0px;
+}
+
+#last{
+  color: black;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 50px;
+
+}
+.kabir{
+  background-color: white;
+  padding-top: 50px;
+  color: black;
+  text-align: center;
+  
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.title-image{
+  height: 400px;
+  width: 600px;
+  padding-left: 100px;
+}
+
+.butn{
+  padding-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(41, 39, 39);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#more {display: none;}
+
+#myBtn{
+  border-radius: 10px;
+  border-width: 1px;
+  background-color: whitesmoke;
+  margin-left: 35%;
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(12, 12, 177);
+  cursor: pointer;
+  color: white;
+  transition: 10ms;
+}
+
+.para{
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.b1{
+  font-size: 30px;
+}
+

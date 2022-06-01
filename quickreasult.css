@@ -1,0 +1,40 @@
+#top{
+    background-color: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    color:aliceblue;
+    font-size: 30px;}
+
+
+#gap{
+    height: 25%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.main{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+  #middle{
+    background-color: black;
+    color:aliceblue;
+    padding-top:0px;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  
+  }
+  #footer{
+  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+#lower{
+    text-align: center;
+    padding-top: 10px;
+}
